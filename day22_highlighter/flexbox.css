@@ -1,0 +1,51 @@
+.flex {
+    display: flex;
+}
+
+.box {
+    /* flex-grow: 1; */
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(200, 100%, 80%);
+    border: 3px solid hsl(200, 100%, 50%);
+    /* flex-grow: 1;  */
+    /* grow makes you take the available space */
+
+    /* flex-basis of 0 will size each element and grow them all as if they started as a size of 0, so they will grow evenly, not matter how much content is in the box */
+}
+
+.flex {
+    /* change how the elements run (left to right is default, can be vertical */
+    /* writing-mode: vertical-lr; */
+
+    /* If you have a hard coded height on your container and you use flex-wrap wrap, you can use align content to specify how you want them laid out */
+    /* height: 300px;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    align-content: center; */
+
+
+}
+
+.box:nth-child(2) {
+   /* flex  grow shrink basis */
+    /* the boxes are all the same width if we set width to 100px. but lets say we make width 500px, it'll shink everything to fit within the row  */
+    /* flex: 0 0 auto; */
+    /* flex: 1; this will set flex grow to 1, shrink to 0, basis to 0 */
+    /* flex: 1 1; passes a value for grow and shrink */
+    /* flex: 1 1 50px; */
+    
+    
+    /* auto spacing */
+    /* if we set marginleft on only this one element, if the flex grow is the default 0, then it will put the available space on the left of it*/
+    /* cool way to add space to one element or a few, e.g. making 4 on the left and 1 on the right or 3 in the middle and one on each end (first-child/last-child margin-right/margin-left) */
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
